@@ -1,0 +1,184 @@
+/* ===== SECÇÃO "SOBRE A CLOUDNINE" ===== */
+.sobre {
+  --sobre-cor: #6c5ce7;
+  --sobre-cor2: #00b4d8;
+  --sobre-fundo: rgba(127, 127, 127, 0.08);
+  --sobre-borda: rgba(127, 127, 127, 0.25);
+}
+
+/* Topo */
+.sobre-topo {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 40px;
+}
+
+.sobre-etiqueta {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sobre-cor);
+  background: rgba(108, 92, 231, 0.15);
+}
+
+.sobre-topo h2 {
+  margin: 14px 0 10px;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.sobre-topo p {
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* Números em destaque */
+.sobre-numeros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.sobre-numero {
+  text-align: center;
+  padding: 22px 14px;
+  border-radius: 16px;
+  background: var(--sobre-fundo);
+  border: 1px solid var(--sobre-borda);
+}
+
+.sobre-numero strong {
+  display: block;
+  font-size: 1.9rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--sobre-cor), var(--sobre-cor2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--sobre-cor);
+}
+
+.sobre-numero span {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  opacity: 0.8;
+}
+
+/* Cartões */
+.sobre-grelha {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.sobre-cartao {
+  position: relative;
+  overflow: hidden;
+  padding: 28px 24px 24px;
+  border-radius: 18px;
+  background: var(--sobre-fundo);
+  border: 1px solid var(--sobre-borda);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.sobre-cartao::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--sobre-cor), var(--sobre-cor2));
+}
+
+.sobre-cartao:hover {
+  transform: translateY(-6px);
+  border-color: var(--sobre-cor);
+  box-shadow: 0 14px 30px rgba(108, 92, 231, 0.22);
+}
+
+.sobre-icone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 14px;
+  border-radius: 16px;
+  font-size: 1.7rem;
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.25), rgba(0, 180, 216, 0.25));
+}
+
+.sobre-cartao h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.sobre-cartao p {
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Horário */
+.sobre-horario {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sobre-horario li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px dashed var(--sobre-borda);
+}
+
+.sobre-horario li:last-child {
+  border-bottom: none;
+}
+
+.sobre-horario span {
+  opacity: 0.85;
+}
+
+/* Cartão de aviso: largura total */
+.sobre-alerta {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: rgba(255, 159, 67, 0.12);
+  border-color: rgba(255, 159, 67, 0.6);
+}
+
+.sobre-alerta::before {
+  background: linear-gradient(90deg, #ff9f43, #ee5253);
+}
+
+.sobre-alerta:hover {
+  border-color: #ff9f43;
+  box-shadow: 0 14px 30px rgba(255, 159, 67, 0.25);
+}
+
+.sobre-alerta .sobre-icone {
+  flex-shrink: 0;
+  margin-bottom: 0;
+  background: rgba(255, 159, 67, 0.25);
+}
+
+/* Telemóvel */
+@media (max-width: 600px) {
+  .sobre-alerta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

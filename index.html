@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CloudNine Vape Shop - loja de vapes, líquidos e acessórios. Venda exclusiva a maiores de 18 anos.">
+  <title>CloudNine Vape Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sobre.css">
+</head>
+<body>
+
+  <!-- CONFIRMAÇÃO DE IDADE -->
+  <div id="idade" class="idade" role="dialog" aria-modal="true" aria-labelledby="idadeTitulo">
+    <div class="idade-caixa">
+      <h2 id="idadeTitulo">🔞 Verificação de idade</h2>
+      <p>Este website destina-se exclusivamente a maiores de 18 anos. Tens 18 anos ou mais?</p>
+      <div class="botoes">
+        <button id="btnSim" class="btn btn-principal">Sim, tenho 18+</button>
+        <button id="btnNao" class="btn btn-secundario">Não</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="aviso-saude">⚠️ Este produto contém nicotina, substância altamente viciante. Venda proibida a menores de 18 anos.</div>
+
+  <!-- CABEÇALHO + MENU -->
+  <header class="cabecalho">
+    <div class="container barra">
+      <a href="#inicio" class="logo">☁️ CloudNine</a>
+      <button id="btnMenu" class="btn-menu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav id="menu" class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#galeria">Sobre nós</a></li>
+          <li><a href="#dicas">Dicas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button id="btnModoEscuro" class="btn-icone" aria-label="Alternar modo escuro">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- APRESENTAÇÃO -->
+    <section id="inicio" class="hero">
+      <div class="container">
+        <h1>A tua loja de vapes de confiança.</h1>
+        <p>Dispositivos, líquidos e acessórios de qualidade, com aconselhamento personalizado em loja. Só para maiores de 18 anos.</p>
+        <div class="botoes">
+          <button id="btnObrigado" class="btn btn-principal">Obrigado pela visita</button>
+          <button id="btnCor" class="btn btn-secundario">Mudar cor de fundo</button>
+        </div>
+        <p id="contador" class="contador">Visitas: 0</p>
+      </div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section id="produtos" class="seccao">
+      <div class="container">
+        <h2>Os nossos produtos</h2>
+        <div class="grelha">
+          <article class="cartao" data-produto="pod" role="button" tabindex="0" aria-haspopup="dialog">
+            <span class="icone">🔋</span>
+            <h3>Dispositivos Pod</h3>
+            <p>Compactos e fáceis de usar, ideais para quem está a começar.</p>
+            <span class="ver-mais">Ver detalhes →</span>
+          </article>
+          <article class="cartao" data-produto="kits" role="button" tabindex="0" aria-haspopup="dialog">
+            <span class="icone">⚙️</span>
+            <h3>Kits Avançados</h3>
+            <p>Mods e tanques ajustáveis para utilizadores experientes.</p>
+            <span class="ver-mais">Ver detalhes →</span>
+          </article>
+          <article class="cartao" data-produto="liquidos" role="button" tabindex="0" aria-haspopup="dialog">
+            <span class="icone">🧪</span>
+            <h3>Líquidos</h3>
+            <p>Vários sabores e níveis de nicotina, incluindo opção sem nicotina.</p>
+            <span class="ver-mais">Ver detalhes →</span>
+          </article>
+          <article class="cartao" data-produto="acessorios" role="button" tabindex="0" aria-haspopup="dialog">
+            <span class="icone">🔧</span>
+            <h3>Acessórios</h3>
+            <p>Resistências, baterias, carregadores e estojos de proteção.</p>
+            <span class="ver-mais">Ver detalhes →</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE A CLOUDNINE -->
+    <section id="galeria" class="seccao seccao-alt sobre">
+      <div class="container">
+
+        <div class="sobre-topo">
+          <span class="sobre-etiqueta">Sobre nós</span>
+          <h2>Conhece a CloudNine</h2>
+          <p>Somos uma loja de vapes no Porto. Fica a conhecer como funcionamos e o que podes encontrar em loja.</p>
+        </div>
+
+        <div class="sobre-numeros">
+          <div class="sobre-numero">
+            <strong>23h</strong>
+            <span>Abertos até às 23h<br>(sábado)</span>
+          </div>
+          <div class="sobre-numero">
+            <strong>2 anos</strong>
+            <span>De garantia legal<br>nos dispositivos</span>
+          </div>
+          <div class="sobre-numero">
+            <strong>0–20 mg</strong>
+            <span>Níveis de nicotina<br>nos líquidos</span>
+          </div>
+          <div class="sobre-numero">
+            <strong>18+</strong>
+            <span>Venda apenas a<br>maiores de idade</span>
+          </div>
+        </div>
+
+        <div class="sobre-grelha">
+          <article class="sobre-cartao">
+            <span class="sobre-icone">🏪</span>
+            <h3>A nossa loja</h3>
+            <p>Espaço físico na Rua Campo dos Mártires da Pátria, 4050-366 Porto, com atendimento personalizado e uma equipa que explica o funcionamento de cada produto.</p>
+          </article>
+
+          <article class="sobre-cartao">
+            <span class="sobre-icone">🕘</span>
+            <h3>Horário</h3>
+            <ul class="sobre-horario">
+              <li><span>Segunda a sexta</span><strong>10h00 – 20h00</strong></li>
+              <li><span>Sábado</span><strong>10h00 – 23h00</strong></li>
+              <li><span>Domingo e feriados</span><strong>Fechado</strong></li>
+            </ul>
+          </article>
+
+          <article class="sobre-cartao">
+            <span class="sobre-icone">🔋</span>
+            <h3>Dispositivos</h3>
+            <p>Vapes e kits avançados com potência ajustável. Todos os dispositivos são vendidos com carregador e manual em português.</p>
+          </article>
+
+          <article class="sobre-cartao">
+            <span class="sobre-icone">🧪</span>
+            <h3>Líquidos</h3>
+            <p>Sabores de fruta, mentol, tabaco e sobremesa. Níveis de nicotina de 0 mg a 20 mg, com opção sem nicotina.</p>
+          </article>
+
+          <article class="sobre-cartao">
+            <span class="sobre-icone">🛡️</span>
+            <h3>Garantia</h3>
+            <p>2 anos de garantia legal nos dispositivos. Baterias e resistências são consumíveis e têm garantia limitada.</p>
+          </article>
+
+          <article class="sobre-cartao sobre-alerta">
+            <span class="sobre-icone">🔞</span>
+            <div>
+              <h3>Venda responsável</h3>
+              <p>Só vendemos a maiores de 18 anos e pedimos identificação em caso de dúvida. A nicotina é viciante: se não fumas, não deves começar.</p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DICAS (frases) -->
+    <section id="dicas" class="seccao">
+      <div class="container frase-caixa">
+        <h2>Dica do dia</h2>
+        <blockquote id="frase">Clica no botão para receber uma dica.</blockquote>
+        <button id="btnFrase" class="btn btn-principal">Nova dica</button>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="seccao seccao-alt">
+      <div class="container">
+        <h2>Contacta-nos</h2>
+        <form id="formContacto" class="formulario" novalidate>
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="O teu nome" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+
+          <label for="assunto">Assunto</label>
+          <select id="assunto" name="assunto">
+            <option>Dúvidas sobre produtos</option>
+            <option>Encomendas</option>
+            <option>Garantia e assistência</option>
+            <option>Outro</option>
+          </select>
+
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreve a tua mensagem..." required></textarea>
+
+          <button type="submit" class="btn btn-principal">Enviar</button>
+          <p id="feedback" class="feedback" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="container">
+      <p>&copy; 2026 CloudNine Vape Shop · Projeto escolar fictício</p>
+      <p>📍 Rua do Exemplo, 45 · 📞 912 345 678 · ✉️ info@cloudnine.pt</p>
+      <p class="legal">Venda proibida a menores de 18 anos. A nicotina é uma substância viciante. Se não fumas, não deves começar.</p>
+    </div>
+  </footer>
+
+  <!-- JANELA DE DETALHES DO PRODUTO -->
+  <div id="modalProduto" class="modal escondido" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+    <div class="modal-caixa">
+      <button id="btnFechar" class="modal-fechar" aria-label="Fechar">✕</button>
+      <span id="modalIcone" class="modal-icone"></span>
+      <h2 id="modalTitulo"></h2>
+      <p id="modalDescricao" class="modal-descricao"></p>
+
+      <h3>Artigos disponíveis</h3>
+      <ul id="modalArtigos" class="artigos"></ul>
+
+      <h3>Informação útil</h3>
+      <ul id="modalInfo" class="info"></ul>
+
+      <a href="#contacto" id="modalContacto" class="btn btn-principal">Pedir informações</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
